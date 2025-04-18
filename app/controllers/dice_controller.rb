@@ -1,5 +1,8 @@
 class DiceController < ApplicationController
-	def values
+	def home
+    render({:template => "game_templates/home"}) 
+  end 
+  def values
     @n1_value=params.fetch("n1").to_i
     @n2_value=params.fetch("n2").to_i
     @rolls=[]
